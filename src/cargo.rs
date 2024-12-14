@@ -5,7 +5,7 @@ ext!(def; Cargo);
 
 impl Cargo {
     #[inline]
-    fn new(sub: impl AsRef<OsStr>) -> Self {
+    pub fn new(sub: impl AsRef<OsStr>) -> Self {
         let mut git = Self(Command::new("cargo"));
         git.arg(sub);
         git
